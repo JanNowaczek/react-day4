@@ -1,22 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import List from 'list'
+import List from './List'
 
-//import Counter from './Counter'
-//import Calc from './Calc'
+// import Counter from './Counter'
+// import Calc from './Calc'
 
-class App extends React.Component {
-  render(){
-    return(
-      <div>
-          <List />
-          {/* <Counter /> */}
-          {/* <Calc /> */}
+const App = (props) => (
+  <div>
+    <List />
+    {/* <Counter /> */}
+    {/* <Calc /> */}
+  </div>
+)
 
-      </div>
-    )
-  }
-}
-
-
-export default App;
+export default App

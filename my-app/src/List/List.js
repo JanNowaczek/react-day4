@@ -1,18 +1,26 @@
 import React from 'react'
 
 class List extends React.Component {
-    state ={
-        users: null, 
+    state = {
+        users: null,
+        isLoading: false,
+        isError: false,
     }
 
-    render(){
-      return(
-        <div>   
-  
-        </div>
-      )
+    componentDidMount() {
+        fetch('https://randomuser.me/api')
+            .then(r => r.json())
+            .then(data => this.setState({ users: data.results }))
     }
-  }
-  
-  
-  export default List;
+
+    render() {
+        return (
+            <div>
+                {JSON.stringify(this.state.users)}
+            </div>
+        )
+    }
+}
+
+
+export default List;
