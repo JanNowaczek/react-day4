@@ -4,7 +4,7 @@ import Error from './Error'
 import Loading from './Loading'
 import NotLoaded from './NotLoaded'
 import NoUsers from './NoUsers'
-import JResults from './Results'
+import Results from './Results'
 
 class List extends React.Component {
     state = {
@@ -43,8 +43,8 @@ class List extends React.Component {
                                     //'No users found'
                                     <NoUsers />
                                     :
-                                    JSON.stringify(this.state.users)
-                               
+                                    <Results />
+
                 }
             </div>
         )

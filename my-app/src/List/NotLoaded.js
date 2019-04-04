@@ -1,8 +1,8 @@
 import React from 'react'
 
 const NotLoaded = (props) => (
-  <div>
-    NotLoaded
+    <div>
+        NotLoaded
   </div>
 )
 

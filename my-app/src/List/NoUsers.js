@@ -1,8 +1,8 @@
 import React from 'react'
 
 const NoUsers = (props) => (
-  <div>
-    NoUsers
+    <div>
+        NoUsers
   </div>
 )
 

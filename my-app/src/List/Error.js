@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Error = (props) => (
-  <div>
-    Error
+    <div>
+        Error
   </div>
 )
 
