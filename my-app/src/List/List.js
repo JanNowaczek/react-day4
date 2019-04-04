@@ -1,5 +1,11 @@
 import React from 'react'
 
+import Error from './Error'
+import Loading from './Loading'
+import NotLoaded from './NotLoaded'
+import NoUsers from './NoUsers'
+import JResults from './Results'
+
 class List extends React.Component {
     state = {
         users: null,
@@ -22,16 +28,20 @@ class List extends React.Component {
             <div>
                 {
                     this.state.isError ?
-                        'Error'
+                        //'Error'
+                        <Error />
                         :
                         this.state.isLoading ?
-                            'Loading'
+                            //'Loading'
+                            <Loading />
                             :
                             !this.state.users ?
-                                'Data not loaded yet'
+                                //'Data not loaded yet'
+                                <NotLoaded />
                                 :
                                 this.state.users.length === 0 ?
-                                    'No users found'
+                                    //'No users found'
+                                    <NoUsers />
                                     :
                                     JSON.stringify(this.state.users)
                                
