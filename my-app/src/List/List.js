@@ -8,9 +8,13 @@ class List extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({ isLoading: true })
+
         fetch('https://randomuser.me/api')
             .then(r => r.json())
             .then(data => this.setState({ users: data.results }))
+            .catch(() => this.setState ({ isError: true}))
+            .finally(() => this.setState({isLoading: false}))
     }
 
     render() {
