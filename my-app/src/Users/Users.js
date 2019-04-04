@@ -27,6 +27,14 @@ class Users extends React.Component {
 
 
     render() {
+        const filterUsers = (
+            this.state.users &&
+            this.state.users.filter &&
+            this.state.users.filter(
+                () => true
+            )
+        )
+
         return (
             <div>
                 <Search
