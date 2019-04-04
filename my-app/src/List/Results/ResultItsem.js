@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ResultsItem = (props) => (
+const ResultsItem = ({user}) => (
     <div>
-        {props.user.name.first} {props.user.name.last}
+        {user.name.first} {user.name.last}
     </div>
 
 )
