@@ -3,23 +3,15 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField'
 
 class Search extends React.Component {
-    state = {
-        searchTerm: 'asad'
-    }
 
-    onSearchTermChange = event => this.setState({ 
-        searchTerm: event.target.value
-    })
-
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <TextField
-                    value={this.state.searchTerm}
-                    onChange={this.onSearchTermChange} 
+                    value={this.props.searchTerm}
+                    onChange={this.props.onSearchTermChange}
                     fullWidth={true}
                 />
-
             </div>
         )
     }
