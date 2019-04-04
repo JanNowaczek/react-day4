@@ -4,40 +4,35 @@ import Error from './Error'
 import Loading from './Loading'
 import NotLoaded from './NotLoaded'
 import NoUsers from './NoUsers'
-import Results from './Results/Results'
+import Results from './Results'
 
-class List extends React.Component {
-
-    
-render() {
-    return (
-        <div>
-            {
-                this.props.isError ?
-                    //'Error'
-                    <Error />
+const List = (props) => (
+    <div>
+        {
+           props.isError ?
+                //'Error'
+                <Error />
+                :
+                props.isLoading ?
+                    //'Loading'
+                    <Loading />
                     :
-                    this.props.isLoading ?
-                        //'Loading'
-                        <Loading />
+                    !props.users ?
+                        //'Data not loaded yet'
+                        <NotLoaded />
                         :
-                        !this.props.users ?
-                            //'Data not loaded yet'
-                            <NotLoaded />
+                        props.users.length === 0 ?
+                            //'No users found'
+                            <NoUsers />
                             :
-                            this.props.users.length === 0 ?
-                                //'No users found'
-                                <NoUsers />
-                                :
-                                <Results
-                                    data={this.props.users}
-                                />
+                            <Results
+                                data={props.users}
+                            />
 
-            }
-        </div>
-    )
-}
-}
+        }
+    </div>
+)
+
 
 
 export default List;

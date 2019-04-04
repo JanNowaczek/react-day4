@@ -1,6 +1,7 @@
 import React from 'react'
 
 import List from '../List'
+import Search from '../Search'
 
 class Users extends React.Component {
     state = {
@@ -24,6 +25,7 @@ class Users extends React.Component {
     render() {
         return (
             <div>
+                <Search />
                 <List
                     users={this.state.users}
                     isLoading={this.state.isLoading}
