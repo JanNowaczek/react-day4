@@ -1,14 +1,17 @@
 import React from 'react';
 
-import Counter from './Counter'
-import Calc from './Calc'
+import List from 'list'
+
+//import Counter from './Counter'
+//import Calc from './Calc'
 
 class App extends React.Component {
   render(){
     return(
       <div>
-          <Counter />
-          <Calc />
+          <List />
+          {/* <Counter /> */}
+          {/* <Calc /> */}
 
       </div>
     )
