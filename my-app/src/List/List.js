@@ -4,7 +4,7 @@ import Error from './Error'
 import Loading from './Loading'
 import NotLoaded from './NotLoaded'
 import NoUsers from './NoUsers'
-import Results from './Results'
+import Results from './Results/Results'
 
 class List extends React.Component {
     state = {
