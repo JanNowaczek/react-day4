@@ -43,7 +43,9 @@ class List extends React.Component {
                                     //'No users found'
                                     <NoUsers />
                                     :
-                                    <Results />
+                                    <Results
+                                        data={this.state.users}
+                                    />
 
                 }
             </div>
