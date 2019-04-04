@@ -37,7 +37,7 @@ class Users extends React.Component {
                     const searchTermWithoutDiacritics = searchTermWithoutSpaces.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 
 
-                    return name.includes(searchTerm)
+                    return name.includes(searchTermWithoutDiacritics)
                 }
             )
         )
