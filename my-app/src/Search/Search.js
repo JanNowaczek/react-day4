@@ -6,8 +6,8 @@ const Search = (props) => (
 
     <div>
         <TextField
-            value={this.props.searchTerm}
-            onChange={this.props.onSearchTermChange}
+            value={props.searchTerm}
+            onChange={props.onSearchTermChange}
             fullWidth={true}
         />
     </div>

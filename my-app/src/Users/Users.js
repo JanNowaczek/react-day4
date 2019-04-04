@@ -27,11 +27,15 @@ class Users extends React.Component {
 
 
     render() {
-        const filterUsers = (
+        const filteredUsers = (
             this.state.users &&
             this.state.users.filter &&
             this.state.users.filter(
-                () => true
+                user => {
+                    const name = user.name.first + user.name.last
+
+                    return name.includes(this.state.searchTerm)
+                }
             )
         )
 
@@ -42,7 +46,7 @@ class Users extends React.Component {
                     onSearchTermChange={this.onSearchTermChange}
                 />
                 <List
-                    users={this.state.users}
+                    users={filteredUsers}
                     isLoading={this.state.isLoading}
                     isError={this.state.isError}
                 />
